@@ -1,46 +1,41 @@
 <mat-chip-list aria-label="Fish selection">
-  <mat-chip>Submitted: 119</mat-chip>
-  <mat-chip>Approved: 111</mat-chip>
-  <mat-chip>Rejected: 4</mat-chip>
-  <mat-chip>Pending: 0</mat-chip>
-  <mat-chip>Draft: 0</mat-chip>
-  <mat-chip>Deleted: 4</mat-chip>
+	<mat-chip>Submitted: 119</mat-chip>
+	<mat-chip>Approved: 111</mat-chip>
+	<mat-chip>Rejected: 4</mat-chip>
+	<mat-chip>Pending: 0</mat-chip>
+	<mat-chip>Draft: 0</mat-chip>
+	<mat-chip>Deleted: 4</mat-chip>
 </mat-chip-list>
 
 <br/>
 
 
 <mat-form-field appearance="outline">
-  <mat-label>Search</mat-label>
-  <input matInput type="text" [(ngModel)]="value">
-  <button mat-button matSuffix mat-icon-button  [matMenuTriggerFor]="menu" aria-label="Clear" (click)="value=''">
+	<mat-label>Search</mat-label>
+	<input matInput type="text" [(ngModel)]="searchString">
+	<button mat-button matSuffix mat-icon-button  [matMenuTriggerFor]="menu" aria-label="Clear">
     <mat-icon>arrow_drop_down</mat-icon>
   </button>
-  <mat-hint>{{selectedOption}}</mat-hint>
+	<mat-hint>{{selectedOption}}</mat-hint>
 </mat-form-field>
 
 <mat-menu #menu="matMenu">
-  <button mat-menu-item (click)="onSelectedItem('Not Reviewed')">
+	<button mat-menu-item (click)="onSelectedItem('Not Reviewed')">
     <span>Not Reviewed</span>
   </button>
-  <button mat-menu-item (click)="onSelectedItem('All')">
+	<button mat-menu-item (click)="onSelectedItem('All')">
     <span>All</span>
   </button>
-  <button mat-menu-item (click)="onSelectedItem('Approved')">
+	<button mat-menu-item (click)="onSelectedItem('Approved')">
     <span>Approved</span>
   </button>
-  <button mat-menu-item (click)="onSelectedItem('Rejected')">
+	<button mat-menu-item (click)="onSelectedItem('Rejected')">
     <span>Rejected</span>
   </button>
-  <button mat-menu-item (click)="onSelectedItem('Exclude Deleted')">
+	<button mat-menu-item (click)="onSelectedItem('Exclude Deleted')">
     <span>Exclude Deleted</span>
   </button>
 </mat-menu>
-
-
-<!-- Copyright 2019 Google LLC. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license -->
 
 
 <!-- Copyright 2019 Google LLC. All Rights Reserved.
