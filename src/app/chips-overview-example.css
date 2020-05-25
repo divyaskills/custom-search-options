@@ -1,1 +1,8 @@
 /** No CSS for this example */
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
